@@ -1,7 +1,7 @@
 const messageFlag = true
 const styleOverride = true
 
-const message = "Sorry about the covid.<br>I love you!"
+const message = '"Daddy find Gma"'
 const fontSize = "6vw"
 
 if (messageFlag) {
