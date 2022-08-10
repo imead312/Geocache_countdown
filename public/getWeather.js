@@ -15,19 +15,26 @@ const displayWeather = async data => {
 
     document.getElementById("temp").innerHTML = Math.floor(temp - 273) + " \u00B0C";
     document.getElementById("weather").innerHTML = description;
-    document.getElementById("weatherIcon").setAttribute('src', await iconUrl);
+    
+    getIconUrl(weather['icon']).then(
+        (iconURL) => {
+            console.log("got icon");
+            document.getElementById("weatherIcon").setAttribute('src', iconURL);
+        // document.getElementById("weatherIcon").style.filter="hue-rotate(90deg)";
+        console.log("icon retrieved from " + iconURL);
+    }).catch(error => {console.error(error)})
+        
 }
 
 const getIconUrl = async iconID => {
     return `https://openweathermap.org/img/wn/${iconID}@2x.png` 
 }
 
+const updateIconStyle = async => {
+    
+}
+
 let apiKey = "4ce4cf62a72d099319391003cfaed376"
 let city = "Perth"
 let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
-getJSON(url).then((data) => displayWeather(data)).catch(error => {
-    console.error(error);
-  })
-
-
-// return temp in Celcius, weather and/or description, icon
+getJSON(url).then((data) => displayWeather(data)).catch(error => {console.error(error)});
