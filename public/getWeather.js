@@ -7,24 +7,41 @@ const getJSON = async url => {
 }
 
 const displayWeather = async data => {
+    console.log(JSON.stringify(data, null, 8));
     let temp = data["main"]["temp"];
     let weather = data["weather"][0];
     let main = weather['main'];
     let description = weather['description'];
-    let iconUrl = getIconUrl(weather['icon']);
+    let iconID = weather['icon']
+    let iconUrl = getIconUrl(iconID);
+
+    constructIconID(iconID);
 
     document.getElementById("temp").innerHTML = Math.floor(temp - 273) + " \u00B0C";
     document.getElementById("weather").innerHTML = description;
     
     getIconUrl(weather['icon']).then(
         (iconURL) => {
-            console.log("got icon");
             document.getElementById("weatherIcon").setAttribute('src', iconURL);
-        // document.getElementById("weatherIcon").style.filter="hue-rotate(90deg)";
-        console.log("icon retrieved from " + iconURL);
     }).catch(error => {console.error(error)})
         
 }
+
+function constructIconID (iconID) {
+    
+    const splitID = iconID.match(/[a-zA-Z]+|[0-9]+/g)
+
+    // if (true) {
+    //     var splitID = ['d', '1'];
+    // } else {
+    //     var splitID = ['0', 'n'];
+    // }
+    
+    let codeIndex = (1 * isNaN((splitID[0])));
+    let dayIndex = 1 - codeIndex;
+
+}
+
 
 const getIconUrl = async iconID => {
     return `https://openweathermap.org/img/wn/${iconID}@2x.png` 

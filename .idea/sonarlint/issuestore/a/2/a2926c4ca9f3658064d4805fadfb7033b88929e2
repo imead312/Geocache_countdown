@@ -1,0 +1,13 @@
+
+Njavascript:S1117"-'url' is already declared in the upper scope.(°É®¼øÿÿÿÿ
+Ljavascript:S4326"+Redundant use of `await` on a return value.(ì‚ÂÃùÿÿÿÿ
+Vjavascript:S1481"5Remove the declaration of the unused 'main' variable.(æ’…äşÿÿÿÿ
+Sjavascript:S1854"2Remove this useless assignment to variable "main".(æ’…äşÿÿÿÿ
+Tjavascript:S1481"8Remove the declaration of the unused 'iconUrl' variable.(íÂÿ
+Qjavascript:S1854"5Remove this useless assignment to variable "iconUrl".(íÂÿ
+Wjavascript:S6353 ";Use concise character class syntax '\d' instead of '[0-9]'.(ËåñØ
+?javascript:S125""Remove this commented out code.(æ´‘Ñúÿÿÿÿ
+Zjavascript:S1481)"9Remove the declaration of the unused 'dayIndex' variable.(õÈ³¹ıÿÿÿÿ
+Wjavascript:S1854)"6Remove this useless assignment to variable "dayIndex".(õÈ³¹ıÿÿÿÿ
+‚javascript:S11722"aRemove the unused function parameter "async" or rename it to "_async" to make intention explicit.(ã•¬óşÿÿÿÿ
+Ajavascript:S11862" Unexpected empty arrow function.(ã•¬óşÿÿÿÿ
