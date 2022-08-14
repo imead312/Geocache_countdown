@@ -1,7 +1,7 @@
 const messageFlag = true
 const styleOverride = true
 
-const message = '"Mummy lubs very much"'
+const message = '"Hannah is a butthead"'
 const fontSize = "6vw"
 
 if (messageFlag) {
