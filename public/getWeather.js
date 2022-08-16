@@ -13,6 +13,9 @@ const displayWeather = async data => {
     let description = weather['description'];
     let iconUrl = getIconUrl(weather['icon']);
 
+    // override description field for testing layout
+    // description = "thunderstorm with heavy drizzle"
+
     document.getElementById("temp").innerHTML = Math.floor(temp - 273) + " \u00B0C";
     document.getElementById("weather").innerHTML = description;
     document.getElementById("weatherIcon").setAttribute('src', await iconUrl);
@@ -25,9 +28,19 @@ const getIconUrl = async iconID => {
 let apiKey = "4ce4cf62a72d099319391003cfaed376"
 let city = "Perth"
 let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
-getJSON(url).then((data) => displayWeather(data)).catch(error => {
-    console.error(error);
-  })
 
 
-// return temp in Celcius, weather and/or description, icon
+// overide weather API fetch for testing
+const preGen = false
+
+
+if (preGen) {
+    document.getElementById("temp").innerHTML = 16 + " \u00B0C";
+    document.getElementById("weather").innerHTML = "broken clouds";
+    document.getElementById("weatherIcon").setAttribute('src', 'localWeatherIMG.png');
+} else {
+    getJSON(url).then((data) => displayWeather(data)).catch(error => {
+        console.error(error);
+      })
+}
+

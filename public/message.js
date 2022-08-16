@@ -1,7 +1,8 @@
 const messageFlag = true
 const styleOverride = true
 
-const message = '"Hannah is a butthead"'
+const message = 'Rain, rain, go away.'
+
 const fontSize = "6vw"
 
 if (messageFlag) {
