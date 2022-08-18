@@ -109,6 +109,7 @@ function updateTime () {
         })
     }
 }
+>>>>>>> origin/master
 
 
 function changeButtonState(id) {
