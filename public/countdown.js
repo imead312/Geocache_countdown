@@ -98,7 +98,6 @@ function updateTime () {
                 if (unit.value > 0 || unit.id == "sec") {
                     document.getElementById(unit.id).innerHTML = unit.value + unit.name + (unit.value != 1 ? "s" : "");    
                 } else {
-                    console.log(unit.name + " value currently " + unit.value + ", hiding value.")
                     document.getElementById(unit.id).innerHTML = ""
                 }
             } 
