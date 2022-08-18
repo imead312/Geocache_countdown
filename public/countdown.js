@@ -16,22 +16,37 @@ timeUnits = {
 
 function updateTime () {
 
-    var currentDate = new Date();
-    var now = currentDate.getTime();
-    var distance = countDownTime - now;
+    let currentDate = new Date();
+    let now = currentDate.getTime();
+    let distanceRemaining = countDownTime - now;
+    // let distance = distanceRemaining;
     
-    if (distance < 0) {
+    if (distanceRemaining < 0) {
         clearInterval(x);
         document.getElementById("debug").innerHTML = "We made it!"
     } else {
         Object.keys(timeUnits).forEach((key, _) => {
             let unit = timeUnits[key];
             if (unit.active) {
+
                 if (unit.id == "mon") {
-                    unit.value = (12 + countDownDate.getMonth() - currentDate.getMonth()) % 12;
-                    distance -= getDaysInMonths(currentDate, unit.value);
+                    
+                    let fullMonth;
+                    unit.value = currentDate.getMonth()
+
+                    if (currentDate.getDate() < countDownDate.getDate()) {
+                        if (currentDate.getDay)
+                        fullMonth = true;
+                    } else {
+                        fullMonth = false;
+                    }
+                    let months = getDaysInMonths(currentDate, countDownDate, fullMonth);
+                    console.log(months, fullMonth);
+                    distance -= months[0];
+                    unit.value = months[1];
+
                 } else {
-                    unit.value = Math.floor(distance / unit.factor)
+                    unit.value = Math.floor(distance / unit.factor);
                     distance -= unit.value * unit.factor;
                 }
                 
@@ -50,21 +65,23 @@ function updateTime () {
     }
 }
 
-function getDaysInMonths(startDate, numberOfMonths) {
+function getDaysInMonths(startDate, endDate, fullStartMonth=true) {
     // Calculate how many days in a span of months
     // and return the value in milliseconds
     let year = startDate.getFullYear();
     let month = startDate.getMonth();
-    let end = month + numberOfMonths
+    let end = endDate.getMonth();
     let totalDays = 0;
+    let totalMonths = 0;
 
-    console.log(month);
+    fullStartMonth ? month : month += 1;
 
     for (month; month < end; month++) {
         totalDays += getDaysInMonth(month, year);
+        totalMonths += 1;
     }
-
-    return totalDays * 1000 * 60 * 60 * 24;;
+    totalDays *= (1000 * 60 * 60 * 24)
+    return [totalDays, totalMonths];
 }
 
 
