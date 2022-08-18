@@ -1,7 +1,7 @@
 const messageFlag = true
 const styleOverride = true
 
-const message = 'Rain, rain, go away.'
+const message = `"Daddy put it Emma's black one new Google"`
 
 const fontSize = "6vw"
 

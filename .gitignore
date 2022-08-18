@@ -1,6 +1,9 @@
 # Scratch files
 scratch/
 
+# Jetbrains IDE's
+.idea
+
 # vscode debugging
 .vscode
 
