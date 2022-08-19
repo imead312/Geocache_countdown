@@ -1,138 +1,132 @@
 #main {
-    position: center center;
-    background-image: url();
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: white;
+  position: center center;
+  background-image: url();
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: white;
 }
 
 div.spacer {
-    padding: 12vw;
+  padding: 12vw;
 }
 
 div.transbox {
-    border-radius: 4vw;
-    /* border-radius: 25px; */
-    border: 0.2vw solid #47D7FF;
-    padding: 5vw;
-    margin: 10vw;
-    background-color: #22222230;
-    box-shadow: 0.3vw 0.3vw 0.5vw #000000cc, inset 0.3vw 0.3vw 0.5vw #47d7ffcc;
+  border-radius: 4vw;
+  /* border-radius: 25px; */
+  border: 0.2vw solid #47d7ff;
+  padding: 5vw;
+  margin: 10vw;
+  background-color: #22222230;
+  box-shadow: 0.3vw 0.3vw 0.5vw #000000cc, inset 0.3vw 0.3vw 0.5vw #47d7ffcc;
 }
 
 div.buttons {
-    background-image: url();
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    width: auto;
-    margin: auto;
-    padding: auto;
-    display: flex;
-    flex-wrap: nowrap;
+  background-image: url();
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: auto;
+  margin: auto;
+  padding: auto;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 div.buttonbox {
-    width: auto;
-    margin: auto;
-    padding: 2.5vw;
-    font-size: 4vw;
-    margin: auto;
-    color: rgb(71, 215, 255);
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 500;
-    text-shadow: 0.3vw 0.3vw 0.5vw #000000cc;
-    user-select: none;
+  width: auto;
+  margin: auto;
+  padding: 2.5vw;
+  font-size: 4vw;
+  margin: auto;
+  color: rgb(71, 215, 255);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  text-shadow: 0.3vw 0.3vw 0.5vw #000000cc;
+  user-select: none;
 }
 
 div.buttonbox.on {
+  box-shadow: inset 0.3vw 0.3vw 0.5vw #000000cc;
+  background-color: #22222250;
 
-    box-shadow: inset 0.3vw 0.3vw 0.5vw #000000cc;
-    background-color: #22222250;
-
-    /* color: black; */
-    /* mix-blend-mode: screen; */
+  /* color: black; */
+  /* mix-blend-mode: screen; */
 }
 
 div.transbox p {
-    margin: 2.5vh;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 500;
-    text-shadow: 0.3vw 0.3vw 0.5vw #000000cc;
-    text-align: center;
-    color: rgb(71, 215, 255);
-    font-size: 9vw;
+  margin: 2.5vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  text-shadow: 0.3vw 0.3vw 0.5vw #000000cc;
+  text-align: center;
+  color: rgb(71, 215, 255);
+  font-size: 9vw;
 }
 
 #divmessage {
-    margin: 10vw;
-    margin-top: 20vw;
+  margin: 10vw;
+  margin-top: 20vw;
 }
 
 .weatherBG {
-
-    position: fixed;
-    padding: 0px;
-    margin: 0;
-    width: 100%;
-    height: 20vw;
-    top: 0;
-    right: 0;
-    background:#22222288;
+  position: fixed;
+  padding: 0px;
+  margin: 0;
+  width: 100%;
+  height: 20vw;
+  top: 0;
+  right: 0;
+  background: #22222288;
 }
 
 .row {
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    position: fixed;
-    width: 35vw;
-    height: auto;
-    top: 0px;
-    right: -10vw;
-    margin: 0px;
-    padding: 0px;
-    font-weight: 600;
-    font-size: 5vw;
-    color: white;
-    font-family: 'Albert Sans';
-    color: #ffffffcc;
-    text-shadow: 0.3vw 0.3vw 0.5vw #000000cc;    
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  position: fixed;
+  width: 35vw;
+  height: auto;
+  top: 0px;
+  right: -10vw;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 600;
+  font-size: 5vw;
+  color: white;
+  font-family: "Albert Sans";
+  color: #ffffffcc;
+  text-shadow: 0.3vw 0.3vw 0.5vw #000000cc;
 }
 
 .col {
-    
-    z-index: -1;
-    flex: 50%;
-    white-space: wrap;
+  z-index: -1;
+  flex: 50%;
+  white-space: wrap;
 }
 
 .weatherDescription {
-
-    position:fixed;
-    top: 6.5vw;
-    right: 4vw;
-    font-family: 'Albert Sans';
-    font-size: 5vw;
-    font-weight: 600;
-    justify-content: right;
-    color: #ffffffcc;
-    text-shadow: 0.3vw 0.3vw 0.5vw #000000cc;
-    
-
+  position: fixed;
+  top: 6.5vw;
+  right: 4vw;
+  font-family: "Albert Sans";
+  font-size: 5vw;
+  font-weight: 600;
+  justify-content: right;
+  color: #ffffffcc;
+  text-shadow: 0.3vw 0.3vw 0.5vw #000000cc;
 }
 
 img {
-    position: fixed;
-    top: 0.5vw;
-    right: 0.5vw;
-    width: 14vw;
-    height: auto;
-    opacity: 0.85;
-    filter: drop-shadow(0.3vw 0.3vw 0.5vw #000000cc);
+  position: fixed;
+  top: 0.5vw;
+  right: 0.5vw;
+  width: 14vw;
+  height: auto;
+  opacity: 0.85;
+  filter: drop-shadow(0.3vw 0.3vw 0.5vw #000000cc);
 }
-
