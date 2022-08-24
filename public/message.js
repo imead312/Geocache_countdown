@@ -2,7 +2,7 @@ const messageFlag = true
 const styleOverride = true
 
 const messages = [
-    `"I want push Daddy over in the snow. We could do that."`
+    `"I want push Daddy over in the snow. We could do that."`,
     `"Daddy put it Emma's black one new Google"`,
 ]
 
