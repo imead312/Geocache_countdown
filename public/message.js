@@ -1,7 +1,12 @@
 const messageFlag = true
 const styleOverride = true
 
-const message = `"Daddy put it Emma's black one new Google"`
+const messages = [
+    `"I want push Daddy over in the snow. We could do that."`
+    `"Daddy put it Emma's black one new Google"`,
+]
+
+const message = messages[0]
 
 const fontSize = "6vw"
 
