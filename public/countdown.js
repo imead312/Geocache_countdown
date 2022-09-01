@@ -2,7 +2,7 @@
 
 let countdownDate, countdownTime, timeUnits;
 
-countdownDate = new Date("October 17, 2022 09:00:00")
+countdownDate = new Date("October 17, 2022 16:45:00")
 countdownTime = countdownDate.getTime();
 
 timeUnits = {
