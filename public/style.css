@@ -1,4 +1,4 @@
-#main {
+.background {
   position: center center;
   background-image: url();
   background-position: center center;
@@ -8,11 +8,11 @@
   background-color: white;
 }
 
-div.spacer {
+.spacer {
   padding: 12vw;
 }
 
-div.transbox {
+.transbox {
   border-radius: 4vw;
   /* border-radius: 25px; */
   border: 0.2vw solid #47d7ff;
@@ -22,7 +22,7 @@ div.transbox {
   box-shadow: 0.3vw 0.3vw 0.5vw #000000cc, inset 0.3vw 0.3vw 0.5vw #47d7ffcc;
 }
 
-div.buttons {
+.buttons {
   background-image: url();
   background-position: center center;
   background-repeat: no-repeat;
@@ -35,7 +35,7 @@ div.buttons {
   flex-wrap: nowrap;
 }
 
-div.buttonbox {
+.buttonbox {
   width: auto;
   margin: auto;
   padding: 2.5vw;
@@ -49,15 +49,12 @@ div.buttonbox {
   user-select: none;
 }
 
-div.buttonbox.on {
+.buttonbox.on {
   box-shadow: inset 0.3vw 0.3vw 0.5vw #000000cc;
   background-color: #22222250;
-
-  /* color: black; */
-  /* mix-blend-mode: screen; */
 }
 
-div.transbox p {
+.transbox p {
   margin: 2.5vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -68,9 +65,14 @@ div.transbox p {
   font-size: 9vw;
 }
 
-#divmessage {
+.divmessage {
   margin: 10vw;
   margin-top: 20vw;
+  padding: 0vw;
+}
+
+.divmessage p {
+  margin: 1.5vh;
 }
 
 .weatherBG {
@@ -121,7 +123,7 @@ div.transbox p {
   text-shadow: 0.3vw 0.3vw 0.5vw #000000cc;
 }
 
-img {
+.weatherIcon {
   position: fixed;
   top: 0.5vw;
   right: 0.5vw;

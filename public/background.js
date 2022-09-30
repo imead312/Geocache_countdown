@@ -3,7 +3,7 @@ function setBackground() {
   let maxFileNumber = 135;
   let fileNumber = Math.floor(Math.random() * maxFileNumber);
   let path = "url(images/perth" + fileNumber + ".jpg)";
-  document.getElementById("main").style.backgroundImage = path;
+  document.getElementById("backgroundImage").style.backgroundImage = path;
 }
 
 setBackground();
