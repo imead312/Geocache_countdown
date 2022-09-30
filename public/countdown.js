@@ -1,8 +1,14 @@
 "use strict"
 
-let countdownDate, countdownTime, timeUnits;
+let destination, countdownDate, countdownTime, timeUnits;
 
-countdownDate = new Date("October 18, 2022 14:05:00")
+destination = {
+  location: "Perth",
+  Perth: new Date("October 18, 2022 14:05:00"),
+  Sydney: new Date("October 11, 2022 14:15:00"),
+}
+
+countdownDate = destination.Perth;
 countdownTime = countdownDate.getTime();
 
 timeUnits = {
@@ -124,6 +130,25 @@ function changeButtonState(id) {
     }
 
     updateTime();
+}
+
+function changeToggleState() {
+
+  // let divID = '#location'
+  let state = destination.location
+  if (state == "Perth") {
+    destination.location = "Sydney"
+    countdownDate = destination.Sydney;
+  } else {
+    destination.location = "Perth"
+    countdownDate = destination.Perth;
+  }
+  countdownTime = countdownDate.getTime();
+
+  document.getElementById('location').innerHTML = destination.location
+
+  updateTime();
+
 }
 
 updateTime();
