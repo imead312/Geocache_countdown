@@ -80,12 +80,20 @@ function updateTime () {
     let distance = countdownTime - now;
     
     if (distance < 0) {
+      if (destination.location == "Perth") {
         clearInterval(x);
-        document.getElementById("debug").innerHTML = "We made it!"
+      }
+
+        Object.keys(timeUnits).forEach((key, _) => {
+          let unit = timeUnits[key];
+          document.getElementById(unit.id).innerHTML = "";
+        })
+
+        document.getElementById("sec").innerHTML = "We made it!"
     } else {
         Object.keys(timeUnits).forEach((key, _) => {
             let unit = timeUnits[key];
-            let monthObj= {};
+            let monthObj = {};
             if (unit.active) {
 
                 if (unit.id == "mon") {
